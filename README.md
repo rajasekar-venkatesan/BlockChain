@@ -18,6 +18,8 @@ python blockchain.py -p 5002
 
 
 ## Transaction template:
+transaction:
+
 {
 
 'sender': <sender-name/id>,
@@ -58,6 +60,8 @@ http://localhost:5000/nodes/resolve
 
 
 ## Block template:
+block
+
 {
 
 'index': <id>,
