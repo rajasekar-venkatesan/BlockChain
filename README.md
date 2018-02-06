@@ -24,29 +24,29 @@ python blockchain.py -p 5002
 
 ## HTTP POST Operations
 ### 1) Add Transactions:
-Example: To add a transaction to the node in port 5000
+Example: To add a transaction to the node in port 5000 \n
 $ curl -X POST -H "Content-Type: application/json" -d '{"sender": "sender-name/id", "recipient": "recepient-name/id", "amount": 5}' "http://localhost:5000/transactions/new"
 
 ### 2) Register Nodes:
-Example: To register a neighbouring node(:5000) with a node(:5001)
+Example: To register a neighbouring node(:5000) with a node(:5001) \n
 $ curl -X POST -H "Content-Type: application/json" -d '{"nodes": ["http://127.0.0.1:5000"]}' "http://localhost:5001/nodes/register"
 
 ## GET Operations
 ### 1) Mine: 
-Creates/Mines for a new block with all the transactions since previous block 
+Creates/Mines for a new block with all the transactions since previous block \n
 http://localhost:5000/mine
 
 ### 2) Chain: 
-Displays the blockchain held by that node
+Displays the blockchain held by that node \n
 http://localhost:5001/chain
 
 ### 3) Resolve nodes: 
-Compares a node's own chain with its neighbours' chain and resolve which chain to use.
+Compares a node's own chain with its neighbours' chain and resolve which chain to use. \n
 http://localhost:5000/nodes/resolve
 
 
 ## Block template:
-{
+{ \n
 'index': <id>,
 'timestamp': <time>,
 'transactions': [<transactions>],
